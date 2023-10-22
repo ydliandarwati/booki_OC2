@@ -5,40 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Booki - Votre hebergements des vacances!</title>
+    
     <!--connecting to site font Raleway-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <!--connecting to icon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Kit Icon Fontawesome-->
+    <script src="https://kit.fontawesome.com/aaef80e60d.js" crossorigin="anonymous"></script>
     <!--call for css file-->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <div class="main-container">
-
     <!--HEADER-->
     <header>
-    <!--insert logo, click, refert to main page html-->
+        <!--insert logo, click, refert to main page html-->
         <div class="logo">
             <a href="index.html">
                 <img class="img-logo" src="images/logo/Booki.png" alt="logo for Booki hebergements des vacances">
             </a>  
         </div>
 
-            <!--menu navigation bar start from here-->
+        <!--menu navigation bar start from here-->
         <nav>
             <ul class="nav-list">
                 <li class="item-nav">
-                    <a class="nav-btn" href="#ListHebergements"> Hebergements</a>
+                    <a class="nav-btn" href="#hebergements"> Hebergements</a>
                 </li>
                 <li class="item-nav">
-                    <a class="nav-btn" href="#ListActivites"> Activités</a>
+                    <a class="nav-btn" href="#activities"> Activités</a>
                 </li>
             </ul>
         </nav>
-    <!--end of navigation bar-->
+        <!--end of navigation bar-->
     </header>
         
     <!--SEARCH Section-->
@@ -48,11 +49,16 @@
             <p>En plein centre-ville ou en plein nature</p>
         </div>
         
+        <!--Form Search-->
         <div class="search-form">
             <form method="post" action="#" id="form-search">
                 <i class='fas fa-map-marker-alt'></i>
                 <input class="input-form" type="text" name="location" placeholder="Marseille, France">
-                <button class="btn-form">Rechercher</button>
+
+                <!--button visible for dekstop and tablet-->
+                <button type="button" class="btn-search">Rechercher</button>
+                <!--button visible only for mobile version-->
+                <button type="button" class="btn-search-mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
             
@@ -80,30 +86,33 @@
                         
                 <div class="filter-item">
                     <i class="fa-solid fa-fire"></i>
-                    <h2>Nos Pépites</h2>
+                    <h2 class="filter-txt">Nos Pépites</h2>
                 </div>
             </div>
-            
         </div>
 
         <div class="infobar">
             <i class="fa-solid fa-circle-info"></i>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
-
     </section>
 
     
-
     <main>
-    <!--Liste de Hebergements et Les plus populaires-->
+    <!--The Hebergements and Les plus populaires-->
+    <!--This contains of one main DIV with two section inside-->
         <div class="hebergements-and-populaires">
-            <section class="hebergements">
+            <!--first section: hebergement box-->
+            <section id="hebergements" class="hebergements">
                 <div class="hebergements-title">
                     <h1>Hébergement à Marseille</h1>
                 </div>
+                <!--class hebergement-cards contains all the articles (hotel list)-->
                 <div class="hebergements-cards">
                     <a href="#">
+                        <!--class card is the box that contains one image (hotel's photo) 
+                            and two divs inside one main div
+                            (description text and rating inside div card-content)-->
                         <article class="card">
                             <img src="./images/hebergements/HotelduPort.jpg" alt="Image room Hotel du Port">
                             <div class="card-content">
@@ -212,9 +221,12 @@
                         </article>
                     </a>
                 </div>
-                <div id="more"><a href="#">Afficher plus</a></div>
+                <div id="more">
+                    <a href="#">Afficher plus</a>
+                </div>
             </section>
 
+            <!--section Populaire based on "basic code start-up OpenClassroom" with some modification-->
                 <section class="populaires">
                     <div class="populaires-title">
                         <h1 class="section-title">Les plus populaires</h1>
@@ -283,9 +295,9 @@
             </div>
 
         <!--Section Activities-->
-        <section class="activities">            
+        <section id="activities" class="activities">            
             <div class="activities-title">
-                <h2 class="activity-title">Activités à Marseille</h2>
+                <h1 class="activity-title">Activités à Marseille</h1>
             </div>
             <div class="activities-cards">
                 <a href="#">
@@ -331,7 +343,8 @@
             </div>
         </section>
     </main>
-
+    
+</section>
     <footer>
         <div class="footer-container">
             <div class="column-footer">
@@ -358,6 +371,6 @@
             </div>   
         </div> 
     </footer>
-    </div>
+    <!-- </div> -->
 </body>
 </html>
