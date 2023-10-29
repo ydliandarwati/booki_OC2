@@ -12,13 +12,14 @@
 :root {
     /* colors */
     --main-color: #0065FC; /* main theme blue */
-    --filter-bg-color: #DEEBFF; 
+    --filter-bg-color: #DEEBFF; /*light blue */
     --main-bg-color: #F2F2F2; /* main bg color */
     --main-bg-color-tint-2: #D9D9D9;
 }
 
 body {
-    min-width: 357px;
+    /* min-width: 357px; */
+    min-width: 320px;
     max-width: 1440px;
     margin: 0 auto;
 
@@ -155,8 +156,13 @@ header {
     opacity: 1; /* Firefox */
   }
 
+  
 input {
     border: none;
+}
+
+input .input-form {
+    border: none
 }
 
 .fa-map-marker-alt {
@@ -175,7 +181,7 @@ input {
 .btn-search {
     height: 48px;
     padding: 0.9375rem 1rem;
-    align-items: center;
+    justify-content: space-between;
     gap: 0.625rem;
     border-radius: 0rem 0.9375rem 0.9375rem 0rem;
     border: 1px solid var(--main-color);
@@ -436,7 +442,6 @@ input {
     border-radius: 1.25rem;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
     transition-timing-function: linear;
-    background-color: green;
 }
 
 .activities .card:hover {
@@ -520,6 +525,10 @@ footer li a:hover {
         gap: 1.25rem;
     }
 
+    .populaires-cards a {
+        flex: 1 1 0;
+    }
+
     .populaires-cards img {
         height: 146px;
     }
@@ -554,7 +563,7 @@ footer li a:hover {
     }
 
     .img-logo {
-        width: 61px;
+        width: 100%;
         height: 19px;
     }
 
@@ -591,6 +600,7 @@ footer li a:hover {
     .search {
         flex-direction: column;
         padding: 0 1.25rem 0 1.25rem;
+        align-items: stretch;
     }
 
     
@@ -598,6 +608,10 @@ footer li a:hover {
         display: none;
     }
 
+
+    #form-search {
+        justify-content: space-between;
+    }
 
     .btn-search-mobile {
         display: block;
@@ -642,7 +656,6 @@ footer li a:hover {
     .populaires-cards {
         flex-direction: column;
     }
-
 
 
     .hebergements-cards img {
