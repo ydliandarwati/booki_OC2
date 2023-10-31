@@ -151,6 +151,7 @@ header {
 }
 
 ::placeholder {
+    color: black;
     font-weight: bold;
     font-size: 1.125rem;
     opacity: 1; /* Firefox */
@@ -159,6 +160,9 @@ header {
   
 input {
     border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.125rem;
 }
 
 input .input-form {
